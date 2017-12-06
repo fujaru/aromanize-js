@@ -220,7 +220,7 @@ if(typeof module != 'undefined') {
 // Command line interface
 ////////////////////////////////////////////////////////////////////////////////
 
-if(typeof process != 'undefined') {
+if(typeof process != 'undefined' && require.main == module) {
 	
 	// Capture options
 	var script = Aromanize.toLatin;
