@@ -1,0 +1,28 @@
+{
+  "name": "jamora",
+  "version": "0.1.0",
+  "description": "Japanese & Korean transliteration tool for JavaScript",
+  "main": "jamora.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fujaru/jamora-js.git"
+  },
+  "keywords": [
+    "romaji",
+    "romaja",
+    "hangul",
+    "hiragana",
+    "katakana",
+    "romanization",
+    "transliteration"
+  ],
+  "author": "Fajar Chandra <contact@jar2.net> (http://www.jar2.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fujaru/jamora-js/issues"
+  },
+  "homepage": "https://github.com/fujaru/jamora-js#readme"
+}

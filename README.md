@@ -1,4 +1,6 @@
-# jamora-js
+# Jamora-js
+*Notice: This project is currently under development.*
+
 Japanese &amp; Korean transliteration tool for JavaScript
 
 Jamora extends the functionality of JavaScript's String class for transliterating between Hangul (한글), Hiragana (ひらがな), Katakana (カタカナ), to Latin script. Hangul transliteration is based on Revised-Romanization (RR) rules.

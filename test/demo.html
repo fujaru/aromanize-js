@@ -1,0 +1,20 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Jamora-js</title>
+	<script type="text/javascript" src="../jamora.js"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			document.getElementById('HangulInput').addEventListener('keyup', function() {
+				document.getElementById('RomajaOutput').value = hanrom(this.value);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<textarea id="HangulInput" rows="5" cols="100"></textarea><br />
+	<textarea id="RomajaOutput" rows="5" cols="100"></textarea>
+</body>
+</html>
