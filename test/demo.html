@@ -7,14 +7,14 @@
 	<script type="text/javascript">
 		document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('HangulInput').addEventListener('keyup', function() {
-				document.getElementById('RomajaOutput').value = hanrom(this.value);
+				document.getElementById('RomajaOutput').value = this.value.romanize();
 			});
 		});
 	</script>
 </head>
 
 <body>
-	<textarea id="HangulInput" rows="5" cols="100"></textarea><br />
-	<textarea id="RomajaOutput" rows="5" cols="100"></textarea>
+	<textarea id="HangulInput" rows="5" cols="100" placeholder="한글"></textarea><br />
+	<textarea id="RomajaOutput" rows="5" cols="100" placeholder="Romaja"></textarea>
 </body>
 </html>

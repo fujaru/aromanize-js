@@ -217,3 +217,70 @@ if(typeof module != 'undefined') {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Command line interface
+////////////////////////////////////////////////////////////////////////////////
+
+if(typeof process != 'undefined') {
+	
+	// Capture options
+	var script = Aromanize.toLatin;
+	var options = {};
+	var input = '';
+	for(var i = 2; i < process.argv.length; i++) {
+		// Script
+		switch(process.argv[i]) {
+			case '-r':
+			case '--romanize':
+			case '--latin':
+				script = Aromanize.toLatin;
+				break;
+				
+			case '-h':
+			case '--hangul':
+				script = Aromanize.toHangul;
+				break;
+				
+			case '-i':
+			case '--hiragana':
+				script = Aromanize.toHiragana;
+				break;
+				
+			case '-k':
+			case '--katakana':
+				script = Aromanize.toKatakana;
+				break;
+		}
+		
+		// Options
+		if(process.argv[i][0] == '-') {
+			var opt = process.argv[i].split('=');
+			options[opt[0]] = opt[1];
+		}
+		
+		// Input
+		else {
+			input = process.argv[i];
+		}
+	}
+	
+	// If no input provided or --help is triggered, show help
+	if(input == '' || options['--help'] != undefined) {
+		console.log('\n\
+Usage:\n\
+  aromanize [script] [options] <input>\n\
+\n\
+Example:\n\
+  aromanize -r "안녕하세요?"\n\
+\n\
+Script:\n\
+  -r, --romanize    Converts to Latin script.\n\
+\n\
+Options:\n\
+      --help        Display this help message.\n\
+		');
+		process.exit(0);
+	}
+	
+	// Execute script
+	console.log(script.call(Aromanize, input));
+}

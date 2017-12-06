@@ -1,7 +1,7 @@
 {
   "name": "aromanize",
   "version": "0.1.0",
-  "description": "Japanese & Korean transliteration tool for JavaScript",
+  "description": "Korean transliteration tool for JavaScript",
   "main": "aromanize.js",
   "scripts": {
     "test": "node test/test.js"
@@ -14,10 +14,11 @@
     "romaji",
     "romaja",
     "hangul",
-    "hiragana",
-    "katakana",
     "romanization",
-    "transliteration"
+    "transliteration",
+    "transcrption",
+    "string", 
+    "unicode"
   ],
   "author": "Fajar Chandra <contact@jar2.net> (http://www.jar2.net)",
   "license": "MIT",
