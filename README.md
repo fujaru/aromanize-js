@@ -1,50 +1,94 @@
-# Jamora-js
+# Aromanize-js
 *Notice: This project is currently under development.*
 
 Japanese &amp; Korean transliteration tool for JavaScript
 
-Jamora extends the functionality of JavaScript's String class for transliterating between Hangul (한글), Hiragana (ひらがな), Katakana (カタカナ), to Latin script. Hangul transliteration is based on Revised-Romanization (RR) rules.
+Aromanize extends the functionality of JavaScript's String class for transliterating between Hangul (한글), Hiragana (ひらがな), Katakana (カタカナ), to Latin (ローマ字/로마자) script.
 
-## Installation
+## Usage
 
-### Manual Way
+### HTML
 
-Include `jamora.js` into your HTML page. All is set!
-
-```
-<script type="text/javascript" src="jamora.js"></script>
-```
-
-### NPM Module
-
-This library is available as Node.js module. Install it via npm, then include the module to your script.
+Include `aromanize.js` into your HTML page. All is set!
 
 ```
-npm install jamora --save
+<script type="text/javascript" src="aromanize.js"></script>
+<script type="text/javascript">
+
+	// Converts to Latin script
+	"안녕하세요?".romanize(); // annyeonghaseyo?
+
+	// Converts to Hangul
+	"annyeonghaseyo?".toHangul(); // 안녕하세요?
+
+	// Converts to Hiragana
+	"ラーメン".toHiragana(); // らあめん
+
+	// Converts to Katakana
+	"らあめん".toKatakana(); // ラーメン
+
+	// Alternative way to romanize
+	Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
+
+</script>
 ```
 
-## Usage Examples
-```
-"안녕하세요?".toRomaja()
-"こんにちは".toRomaja()
-"コンニチハ".toRomaja()
-"감사하다는 일번어로 ありがとうございます라는 말합니다.".toRomaja()
-```
-Converts Hangul, Hiragana, Katakana, or combination of them to Romaja.
+### Node.js
+
+This module can be installed via npm:
 
 ```
-"Konbanwa".toHiragana()
-"コンバンハ".toHiragana()
+$ npm install aromanize --save
 ```
-Converts Romaji or Katakana to Hiragana.
 
 ```
-"Konbanwa".toKatakana()
-"こんばんは".toHiragana()
+require("aromanize");
+
+// Converts to Latin script
+"안녕하세요?".romanize(); // annyeonghaseyo?
+
+// Converts to Hangul
+"annyeonghaseyo?".toHangul(); // 안녕하세요?
+
+// Converts to Hiragana
+"ラーメン".toHiragana(); // らあめん
+
+// Converts to Katakana
+"らあめん".toKatakana(); // ラーメン
+
+// Alternative way to romanize
+Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
 ```
-Converts Romaji or Hiragana to Katakana.
+
+### Command Line
+
+CLI is available when installed via npm:
+
+```
+$ npm install aromanize -g
+$ aromanize --romanize "안녕하세요?"
+
+Usage:
+  aromanize [script] [options] <input>
+  
+Example:
+  aromanize -r "안녕하세요?"
+  
+Script:
+  -r, --romanize    Converts to Latin script
+  -h, --hangul      Converts to Hangul
+  -i, --hiragana    Converts to Hiragana
+  -k, --katakana    Converts to Katakana
+  
+  When script is not provided, it will default to romanize
+  
+Options:
+      --rule=RULE         Transliteration/transcription rule
+  -p, --ignore-phonology  Ignore phonological changes
+  	
+```
 
 ## License
 
-Jamora-js is released under the MIT License.<br />
+Aromanize-js is released under the MIT License.<br />
 &copy; 2017 Fajar Chandra

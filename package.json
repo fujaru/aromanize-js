@@ -1,14 +1,14 @@
 {
-  "name": "jamora",
+  "name": "aromanize",
   "version": "0.1.0",
   "description": "Japanese & Korean transliteration tool for JavaScript",
-  "main": "jamora.js",
+  "main": "aromanize.js",
   "scripts": {
     "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fujaru/jamora-js.git"
+    "url": "git+https://github.com/fujaru/aromanize-js.git"
   },
   "keywords": [
     "romaji",
@@ -22,7 +22,7 @@
   "author": "Fajar Chandra <contact@jar2.net> (http://www.jar2.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fujaru/jamora-js/issues"
+    "url": "https://github.com/fujaru/aromanize-js/issues"
   },
-  "homepage": "https://github.com/fujaru/jamora-js#readme"
+  "homepage": "https://github.com/fujaru/aromanize-js#readme"
 }
