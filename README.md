@@ -12,4 +12,14 @@ Jamora extends the functionality of JavaScript's String class for transliteratin
 ```
 Converts Hangul, Hiragana, Katakana, or combination of them to Romaja.
 
+```
+"Konbanwa".toHiragana()
+"コンバンハ".toHiragana()
+```
+Converts Romaji or Katakana to Hiragana.
 
+```
+"Konbanwa".toKatakana()
+"こんばんは".toHiragana()
+```
+Converts Romaji or Hiragana to Katakana.
