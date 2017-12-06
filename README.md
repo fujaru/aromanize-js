@@ -24,6 +24,7 @@ Converts Romaji or Katakana to Hiragana.
 ```
 Converts Romaji or Hiragana to Katakana.
 
+## License
 
+Jamora-js is released under the MIT License.<br />
 &copy; 2017 Fajar Chandra
-Released under the MIT License.
