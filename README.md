@@ -3,7 +3,7 @@ Japanese &amp; Korean transliteration tool for JavaScript
 
 Jamora extends the functionality of JavaScript's String class for transliterating between Hangul (한글), Hiragana (ひらがな), Katakana (カタカナ), to Latin script. Hangul transliteration is based on Revised-Romanization (RR) rules.
 
-## Usage
+## Usage Examples
 ```
 "안녕하세요?".toRomaja()
 "こんにちは".toRomaja()
@@ -23,3 +23,7 @@ Converts Romaji or Katakana to Hiragana.
 "こんばんは".toHiragana()
 ```
 Converts Romaji or Hiragana to Katakana.
+
+
+&copy; 2017 Fajar Chandra
+Released under the MIT License.
