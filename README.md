@@ -1,6 +1,6 @@
 # Aromanize-js
 
-Korean transliteration tool for JavaScript
+Korean transliteration utility for JavaScript
 
 Aromanize extends the functionality of JavaScript's String class for romanizing Hangul (한글) to Latin (로마자/Romaja) script.
 
@@ -23,6 +23,18 @@ Include `aromanize.js` into your HTML page. All is set!
 </script>
 ```
 
+If you don't want to extend String class, include `aromanize.js?base` where you can still access all functions through `Aromanize` object.
+
+```
+<script type="text/javascript" src="aromanize.js?base"></script>
+<script type="text/javascript">
+
+	// Converts to Latin script
+	Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
+
+</script>
+```
+
 ### Node.js
 
 This module can be installed via npm:
@@ -32,12 +44,21 @@ $ npm install aromanize --save
 ```
 
 ```
-require("aromanize");
+var Aromanize = require("aromanize");
 
 // Converts to Latin script
 "안녕하세요?".romanize(); // annyeonghaseyo?
 
 // Alternative way to romanize
+Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
+```
+
+If you don't want to extend String class, use `var Aromanize = require("aromanize/base");` where you can still access all functions through `Aromanize` object.
+
+```
+var Aromanize = require("aromanize/base");
+
+// Converts to Latin script
 Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
 ```
 
@@ -50,16 +71,23 @@ $ npm install aromanize -g
 $ aromanize
 
 Usage:
-  aromanize [script] [options] <input>
+  aromanize [TARGET] [OPTIONS] <input>
 
 Example:
   aromanize -r "안녕하세요?"
 
-Script:
-  -r, --romanize    Converts to Latin script.
+TARGET:
+  -r, --romanize,   
+  -l, --latin       Converts to Latin script.
 
-Options:
+OPTIONS:
+      --rule=RULE   Use specified transliteration rule.
       --help        Display this help message.
+      
+RULE:
+  rr                Revised Romanization Transcription (default)
+  rr-translit       Revised Romanization Transliteration
+
 		
 ```
 
@@ -67,3 +95,14 @@ Options:
 
 Aromanize-js is released under the MIT License.<br />
 &copy; 2017 Fajar Chandra
+
+## Changelog
+
+#### 0.1.1
+
+* Added Revised Romanization transliteration rule (rr-translit) for academic application in addition to Revised Romanization transcription rule (rr).
+* Added an option to prevent extending String class.
+
+#### 0.1
+
+* First pre-release

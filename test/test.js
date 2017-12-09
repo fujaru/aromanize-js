@@ -14,3 +14,4 @@ console.log("\n\x1b[1m%s\x1b[0m\nA > %s\nあ > %s\n가 > %s", "コンニチハ",
 console.log("\n\x1b[1m%s\x1b[0m\n가 > %s", "Annyeonghaseyo?", Aromanize.toHangul("Annyeonghaseyo?"));
 console.log("\n\x1b[1m%s\x1b[0m\nあ > %s\nア > %s", "Konbanwa.", Aromanize.toHiragana("Konbanwa."), Aromanize.toKatakana("Konbanwa."));
 console.log("\n\x1b[1m%s\x1b[0m\n> %s", "감사하다는 일번어로 ありがとうございます라는 말합니다.", Aromanize.romanize("감사하다는 일번어로 ありがとうございます라는 말합니다."));
+
