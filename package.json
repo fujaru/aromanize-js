@@ -1,6 +1,6 @@
 {
   "name": "aromanize",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Korean transliteration tool for JavaScript",
   "main": "aromanize.js",
   "scripts": {

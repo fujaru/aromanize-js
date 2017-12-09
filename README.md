@@ -39,7 +39,7 @@ If you don't want to extend String class, include `aromanize.js?base` where you 
 
 This module can be installed via npm:
 
-```
+```sh
 $ npm install aromanize --save
 ```
 
@@ -66,7 +66,7 @@ Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
 
 CLI is available when installed via npm:
 
-```
+```sh
 $ npm install aromanize -g
 $ aromanize
 
@@ -93,7 +93,7 @@ RULE:
 
 ## Documentation
 
-A complete documentation is available at [[GitHub Wiki|https://github.com/fujaru/aromanize-js/wiki]]
+A complete documentation is available at [GitHub Wiki](https://github.com/fujaru/aromanize-js/wiki)
 
 ## License
 
@@ -102,7 +102,7 @@ Aromanize-js is released under the MIT License.<br />
 
 ## Changelog
 
-#### 0.1.2
+#### 0.1.4
 
 * Added Revised Romanization transliteration rule (rr-translit) for academic application in addition to Revised Romanization transcription rule (rr).
 * Added an option to prevent extending String class.
