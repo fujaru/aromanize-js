@@ -19,6 +19,9 @@ Include `aromanize.js` into your HTML page. All is set!
 
 	// Alternative way to romanize
 	Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
+	
+	// Romanize using RR Transliteration rule
+	Aromanize.hangulToLatin("잘 먹었습니다.", 'rr-translit'); // jal meog-eoss-seubnida.
 
 </script>
 ```
@@ -51,6 +54,9 @@ var Aromanize = require("aromanize");
 
 // Alternative way to romanize
 Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
+
+// Romanize using RR Transliteration rule
+Aromanize.hangulToLatin("잘 먹었습니다.", 'rr-translit'); // jal meog-eoss-seubnida.
 ```
 
 If you don't want to extend String class, use `var Aromanize = require("aromanize/base");` where you can still access all functions through `Aromanize` object.
@@ -87,7 +93,8 @@ OPTIONS:
 RULE:
   rr                Revised Romanization Transcription (default)
   rr-translit       Revised Romanization Transliteration
-
+  skats             SKATS Coding
+  ebi               Indonesian Transcription
 		
 ```
 
@@ -101,6 +108,12 @@ Aromanize-js is released under the MIT License.<br />
 &copy; 2017 Fajar Chandra
 
 ## Changelog
+
+#### 0.1.5
+
+* Added an option for hyphenating syllables.
+* Added SKATS transliteration and Indonesian transcription rules.
+* Updated demo page.
 
 #### 0.1.4
 

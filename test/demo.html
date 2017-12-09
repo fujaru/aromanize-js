@@ -3,18 +3,50 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Aromanize-js</title>
-	<script type="text/javascript" src="../aromanize.js"></script>
-	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', function() {
-			document.getElementById('HangulInput').addEventListener('keyup', function() {
-				document.getElementById('RomajaOutput').value = this.value.romanize();
-			});
-		});
-	</script>
+	<style type="text/css">
+		body {
+			margin: auto;
+			max-width: 800px;
+			text-align: center;
+		}
+		textarea, 
+		select {
+			box-sizing: border-box;
+			width: 100%;
+			resize: vertical;
+		}
+		h2 {
+			margin: 20px;
+		}
+	</style>
 </head>
 
 <body>
+	<h2>Hangul - Romaja Transliteration</h2>
 	<textarea id="HangulInput" rows="5" cols="100" placeholder="한글"></textarea><br />
+	<select id="RuleInput">
+		<option value="rr">Revised Romanization</option>
+		<option value="rr-translit">RR Transliteration</option>
+		<option value="skats">SKATS</option>
+		<option value="ebi">Indonesian Transcription</option>
+	</select>
 	<textarea id="RomajaOutput" rows="5" cols="100" placeholder="Romaja"></textarea>
+	
+	<script type="text/javascript" src="../aromanize.js"></script>
+	<script type="text/javascript">
+		function transcribe() {
+			var rule = document.getElementById('RuleInput').value;
+			var input = document.getElementById('HangulInput').value;
+			document.getElementById('RomajaOutput').value = input.romanize(rule);
+		}
+		
+		document.getElementById('HangulInput').addEventListener('keyup', function() {
+			transcribe();
+		});
+		
+		document.getElementById('RuleInput').addEventListener('change', function() {
+			transcribe();
+		});
+	</script>
 </body>
 </html>
