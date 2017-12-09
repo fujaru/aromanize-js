@@ -91,6 +91,10 @@ RULE:
 		
 ```
 
+## Documentation
+
+A complete documentation is available at [[GitHub Wiki|https://github.com/fujaru/aromanize-js/wiki]]
+
 ## License
 
 Aromanize-js is released under the MIT License.<br />
@@ -98,7 +102,7 @@ Aromanize-js is released under the MIT License.<br />
 
 ## Changelog
 
-#### 0.1.1
+#### 0.1.2
 
 * Added Revised Romanization transliteration rule (rr-translit) for academic application in addition to Revised Romanization transcription rule (rr).
 * Added an option to prevent extending String class.
