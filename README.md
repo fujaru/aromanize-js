@@ -10,7 +10,7 @@ Aromanize extends the functionality of JavaScript's String class for romanizing 
 
 Include `aromanize.js` into your HTML page. All is set!
 
-```
+```js
 <script type="text/javascript" src="aromanize.js"></script>
 <script type="text/javascript">
 
@@ -25,7 +25,7 @@ Include `aromanize.js` into your HTML page. All is set!
 
 If you don't want to extend String class, include `aromanize.js?base` where you can still access all functions through `Aromanize` object.
 
-```
+```js
 <script type="text/javascript" src="aromanize.js?base"></script>
 <script type="text/javascript">
 
@@ -43,7 +43,7 @@ This module can be installed via npm:
 $ npm install aromanize --save
 ```
 
-```
+```js
 var Aromanize = require("aromanize");
 
 // Converts to Latin script
@@ -55,7 +55,7 @@ Aromanize.romanize("안녕하세요?"); // annyeonghaseyo?
 
 If you don't want to extend String class, use `var Aromanize = require("aromanize/base");` where you can still access all functions through `Aromanize` object.
 
-```
+```js
 var Aromanize = require("aromanize/base");
 
 // Converts to Latin script
