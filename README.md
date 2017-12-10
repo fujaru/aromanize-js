@@ -85,16 +85,18 @@ Example:
 TARGET:
   -r, --romanize,   
   -l, --latin       Converts to Latin script.
+  -c, --cyrillic    Converts to Cyrillic script.
 
 OPTIONS:
       --rule=RULE   Use specified transliteration rule.
       --help        Display this help message.
       
 RULE:
-  rr                Revised Romanization Transcription (default)
+  rr                Revised Romanization Transcription (default for -r)
   rr-translit       Revised Romanization Transliteration
   skats             SKATS Coding
   ebi               Indonesian Transcription
+  konsevich         Konsevich (default for -c)
 		
 ```
 
