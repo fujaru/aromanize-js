@@ -111,6 +111,9 @@ Aromanize-js is released under the MIT License.<br />
 
 ## Changelog
 
+* Added Konsevich for Cyrillic transcription.
+* Fixed ㄹㄹ syllable pairing (e.g. 떨리다)
+
 #### 0.1.5
 
 * Added an option for hyphenating syllables.
